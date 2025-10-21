@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EWPC - Help</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 25px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      transition: top 0.4s ease;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #ffffff;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #ffffff;
+      border-bottom: 2px solid #444;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .help-section {
+      margin-bottom: 40px;
+    }
+
+    .help-section h3 {
+      color: #ffffff;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .help-section p {
+      color: #cccccc;
+      font-size: 1em;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 20px;
+      font-size: 0.9em;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>European Windstorm Prediction Center</h1>
+    <nav>
+      <a href="https://euwpc.github.io/ewpc.github.io-home/">Home</a>
+      <a href="https://euwpc.github.io/ewpc.github.io-outlooks/">Outlooks</a>
+      <a href="https://euwpc.github.io/ewpc.github.io-archive/">Archive</a>
+      <a href="https://euwpc.github.io/ewpc.github.io-glossary/">Glossary</a>
+      <a href="https://euwpc.github.io/ewpc.github.io-faq/">FAQ</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Help Center</h2>
+
+    <div class="help-section">
+      <h3>How do I read the outlook maps?</h3>
+      <p>The maps show areas of potential windstorm activity. Colors represent different confidence or intensity levels. Refer to the glossary for term definitions.</p>
+    </div>
+
+    <div class="help-section">
+      <h3>Why can't I see the latest outlook?</h3>
+      <p>Sometimes the site cache delays updates. Try refreshing the page or clearing your browser cache.</p>
+    </div>
+
+    <div class="help-section">
+      <h3>Can I report weather damage?</h3>
+      <p>Yes. Visit the report map on the archive page to share reports like power outages, rainfall totals, or wind damage.</p>
+    </div>
+
+    <div class="help-section">
+      <h3>Who maintains this site?</h3>
+      <p>The EWPC project is run by independent weather enthusiasts, not an official meteorological organization.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 European Windstorm Prediction Center
+  </footer>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.style.top = "-120px";
+      } else {
+        header.style.top = "0";
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  </script>
+</body>
+</html>
